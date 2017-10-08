@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-08-2017 12:01:15 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cl.models.pojos.Pacientes" table="pacientes" catalog="test" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="title" type="string">
+            <column name="title" length="30" not-null="true" />
+        </property>
+        <property name="cedula" type="string">
+            <column name="cedula" length="30" not-null="true" />
+        </property>
+        <property name="cell" type="int">
+            <column name="cell" not-null="true" />
+        </property>
+        <property name="dir1" type="string">
+            <column name="dir1" length="50" not-null="true" />
+        </property>
+        <property name="dob" type="string">
+            <column name="dob" length="50" not-null="true" />
+        </property>
+        <property name="fecharegistro" type="string">
+            <column name="fecharegistro" length="30" not-null="true" />
+        </property>
+        <property name="fname" type="string">
+            <column name="fname" length="30" not-null="true" />
+        </property>
+        <property name="lname" type="string">
+            <column name="lname" length="30" not-null="true" />
+        </property>
+        <property name="sex" type="char">
+            <column name="sex" length="1" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="30" not-null="true" />
+        </property>
+        <property name="tel1" type="int">
+            <column name="tel1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
