@@ -27,7 +27,7 @@ public class query {
             
         } catch (Exception e) {
             tx.rollback();
-            throw new RuntimeException("no se puede guardar el producto");
+            throw new RuntimeException("no se puede guardar el doctor");
         }
     }
     
@@ -37,7 +37,7 @@ public class query {
         Doctores d = (Doctores)sesion.get(Doctores.class, codigo); // casteamos a Doctores
         sesion.close();
         if (d!=null) {
-            return "el codigo es " +d.getId();
+            return "el codigo es " +d.getId()+" "+ d.getNombre()+" "+d.getApellido() +" "+d.getTelefono() ;
         } else {
             return "El doctor no existe en la base de datos ";
         }
